@@ -1,0 +1,204 @@
+/* Universal Styles */
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Helvetica';
+}
+
+h1, h4 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: black;
+  color: white;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  padding: .66rem 0 .66rem 0.5rem;
+}
+
+.header img {
+  height: 1.5rem;
+  padding-right: 1rem
+}
+
+/* Banner */
+.title {
+  position: relative;
+  top: 9rem; /* Not margin. Sets static position */
+  width: 20rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: white;
+  background: black;
+}
+
+.title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.background {
+  background-image: url('../../resources/images/moto.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25rem;
+}
+
+/* Navigation */
+nav {
+  background-color: firebrick;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Main section */
+.products,
+.business_info {
+  display: flex;
+  margin: 3rem 0;
+  justify-content: space-between;
+}
+
+.product-pen,
+.product-watch,
+.product-glasses {
+  width: 30%;
+}
+
+.product_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  height: 9rem;
+  border: 4px black solid;
+
+}
+
+.product_image img {
+  max-width: 9rem;
+}
+
+.product_label {
+  display: block;
+  background: black;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.business_title{
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  padding: 5rem 0;
+  margin-top: 4rem;
+}
+
+/* 1024 Page Break */
+
+@media only screen and (max-width: 1024px) {
+ nav ul {
+   display: none;
+ }
+
+.mobile {
+  display: block;
+  text-align: center;
+}
+
+.product-glasses,
+.product-watch {
+  width: 45%;
+}
+
+.product-pen {
+  display: none;
+}
+}
+
+/* 470 Page Break */
+
+@media only screen and (max-width: 470px) {
+
+  .background {
+    height: 15rem;
+  }
+
+  .title {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .title h4 {
+    font-size: .77rem;
+  }
+
+  .title h1 {
+    font-size: 1rem;
+  }
+
+  .product-glasses {
+    width: 90%;
+    margin: auto;
+  }
+
+  .product-watch,
+  .product-pen {
+    display: none;
+  }
+
+  .business_info {
+    flex-wrap: wrap;
+  }
+
+  .info {
+    width: 90%;
+    margin: .5rem auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
